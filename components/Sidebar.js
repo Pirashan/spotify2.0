@@ -3,7 +3,9 @@ import {
   HomeIcon,
   MagnifyingGlassIcon,
   BuildingLibraryIcon,
-  PlusCircleIcon
+  PlusCircleIcon,
+  HeartIcon,
+  RssIcon
 } from '@heroicons/react/24/outline'
 
 
@@ -11,26 +13,49 @@ import {
 
 function Sidebar() {
   return (
-    <div>
-        <div>
-        {/* <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-        </svg>
-        <span>Download</span>
-        </button> */}
-        <button>
+    <div className='text-gray-500 p-5 text-sm border-r border-gray-900'>
+        <div className='space-y-4'>
+        <button className='flex items-center space-x-2 hover:text-white'>
                 <HomeIcon className="h-5 w-5" />
                 <p>Home</p>
-        </button>
-        <button>
+        </button> 
+        <button className='flex items-center space-x-2 hover:text-white'>
                 <MagnifyingGlassIcon className="h-5 w-5" />
                 <p>Search</p>
         </button>
-        <button>
+        <button className='flex items-center space-x-2 hover:text-white'>
                 <BuildingLibraryIcon className="h-5 w-5" />
-                <p>Your Library</p>
+                <p>Your LIbrary</p>
         </button>
+        <hr className='border-t-[0.1px] border-gray-900'></hr>
+
+        <button className='flex items-center space-x-2 hover:text-white'>
+                <PlusCircleIcon className="h-5 w-5" />
+                <p>Create Playlist</p>
+        </button>
+        <button className='flex items-center space-x-2 hover:text-white'>
+                <RssIcon className="h-5 w-5" />
+                <p>Your Episodes</p>
+        </button>
+        <button className='flex items-center space-x-2 hover:text-white'>
+                <HeartIcon className="h-5 w-5" />
+                <p>Liked Songs</p>
+        </button>
+        <hr className='border-t-[0.1px] border-gray-900'></hr>
+
+        {/* Playlists */}
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+        <p className='cursor-pointer hover:text-white'>Playlist name...</p>
+
         </div>
     </div>
   )
