@@ -10,13 +10,15 @@ import {
 } from '@heroicons/react/24/outline'
 import { signOut, useSession } from 'next-auth/react'
 import useSpotify from '../hooks/useSpotify';
+import { useRecoilState } from 'recoil';
+import { playlistIdState } from '../atoms/playlistAtoms';
 
 
 function Sidebar() {
         const spotifyApi = useSpotify();
         const { data: session, status } = useSession();
         const[playlists, setPlaylists] = useState([]);
-        const[playlistId, setPlaylistId] = useState(null);
+        const[playlistId, setPlaylistId] = useRecoilState(playlistIdState);
 
         useEffect (() => {
                 if (spotifyApi.getAccessToken()) {
@@ -29,8 +31,9 @@ function Sidebar() {
         console.log(playlists);
 
   return (
-    <div className='text-gray-500 p-5 text-sm border-r border-gray-900
-    overflow-y-scroll scrollbar-hide h-screen '>
+    <div className='text-gray-500 p-5 text-xs lg:text-sm border-r border-gray-900
+    overflow-y-scroll scrollbar-hide h-screen sm:max-w-[12rem] lg:max-w-[15rem]
+    hidden md:inline-flex'>
         <div className='space-y-4'>
         <button className='flex items-center space-x-2 hover:text-white' onClick={() => signOut()}>
                 <ArrowLeftOnRectangleIcon className="h-5 w-5" />
