@@ -13,7 +13,6 @@ function login({ providers }) {
         onClick={() => signIn(provider.id, { callbackUrl: "/" }
         )}
         >
-        
           Login with {provider.name}
         </button> 
       </div>
